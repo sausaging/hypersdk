@@ -141,6 +141,7 @@ func BuildBlock(
 	mempool.StartStreaming(ctx)
 	b.Txs = []*Transaction{}
 	for time.Since(start) < vm.GetTargetBuildDuration() {
+		//@todo transactions are batchfetched here from mempool
 		prepareStreamLock.Lock()
 		txs := mempool.Stream(ctx, streamBatch)
 		prepareStreamLock.Unlock()
@@ -160,6 +161,13 @@ func BuildBlock(
 		e := executor.New(streamBatch, vm.GetTransactionExecutionCores(), vm.GetExecutorBuildRecorder())
 		pending := make(map[ids.ID]*Transaction, streamBatch)
 		var pendingLock sync.Mutex
+		//@todo sort txs and limit the number of txs to be executed of type verify.
+		// store rest of the txs in a different array.
+		// after passing the block target time - 5seconds, execute rest of the transaction types.
+		// i) execute transactions that are fetched during period (0, blocktime - 5 seconds)
+		// ii) if done with the execution of previous fetched transactions from batches, then start batch fetching the transactions from mempool.
+		// restore the left over transactions to mempool
+		// 2 types of tx array: one for action type verify and other for other action types
 		for li, ltx := range txs {
 			txsAttempted++
 			i := li
@@ -416,7 +424,7 @@ func BuildBlock(
 
 	// Wait for stream preparation to finish to make
 	// sure all transactions are returned to the mempool.
-	go func() {
+	go func() { //@todo restore transactions here
 		prepareStreamLock.Lock()
 		restored := mempool.FinishStreaming(ctx, restorable)
 		b.vm.Logger().Debug("transactions restored to mempool", zap.Int("count", restored))
