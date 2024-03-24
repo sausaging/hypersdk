@@ -201,3 +201,23 @@ func (j *JSONRPCServer) GetWarpSignatures(
 	reply.Signatures = validSignatures
 	return nil
 }
+
+type SubmitChunksArgs struct {
+	ImageID      ids.ID
+	ProofValType uint16
+	ChunkIndex   uint16
+	Data         []byte
+}
+
+func (j *JSONRPCServer) SubmitChunks(
+	req *http.Request,
+	args *SubmitChunksArgs,
+	_ *struct{},
+) error {
+	_, span := j.vm.Tracer().Start(req.Context(), "JSONRPCServer.SubmitChunks")
+	defer span.End()
+
+	j.vm.Broadcast(context.Background(), args.ImageID, args.ProofValType, args.ChunkIndex, args.Data)
+	j.vm.Logger().Info("received chunk", zap.Uint16("chunk index", args.ChunkIndex), zap.Stringer("imageID", args.ImageID), zap.Uint16("proof val type", args.ProofValType))
+	return nil
+}

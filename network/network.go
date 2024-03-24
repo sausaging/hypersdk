@@ -328,7 +328,7 @@ func (n *Manager) CrossChainAppResponse(
 }
 
 // WrappedAppSender is used to get a shared requestID and to prepend messages
-// with the handler identifier.
+// with the handler identifier. @todo the requestID assigned by the individual appSender/network process will be prepended with the
 type WrappedAppSender struct {
 	n       *Manager
 	handler uint8

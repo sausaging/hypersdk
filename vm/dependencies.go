@@ -16,6 +16,7 @@ import (
 	"github.com/ava-labs/hypersdk/builder"
 	"github.com/ava-labs/hypersdk/chain"
 	"github.com/ava-labs/hypersdk/codec"
+	"github.com/ava-labs/hypersdk/filedb"
 	"github.com/ava-labs/hypersdk/gossiper"
 	"github.com/ava-labs/hypersdk/state"
 	"github.com/ava-labs/hypersdk/trace"
@@ -83,6 +84,7 @@ type Controller interface {
 		// databases
 		vmDB database.Database,
 		stateDB database.Database,
+		fileDB *filedb.FileDB,
 		handler Handlers,
 		actionRegistry chain.ActionRegistry,
 		authRegistry chain.AuthRegistry,

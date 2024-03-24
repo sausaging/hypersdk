@@ -346,3 +346,24 @@ func (cli *JSONRPCClient) GenerateAggregateWarpSignature(
 	}
 	return message, weight, signatureWeight, nil
 }
+
+func (cli *JSONRPCClient) SubmitChunks(
+	ctx context.Context,
+	imageID ids.ID,
+	proofValType uint16,
+	chunkIndex uint16,
+	data []byte,
+) error {
+	err := cli.requester.SendRequest(
+		ctx,
+		"submitChunks",
+		&SubmitChunksArgs{
+			ImageID:      imageID,
+			ProofValType: proofValType,
+			ChunkIndex:   chunkIndex,
+			Data:         data,
+		},
+		nil,
+	)
+	return err
+}

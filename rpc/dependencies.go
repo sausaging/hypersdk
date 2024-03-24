@@ -37,4 +37,5 @@ type VM interface {
 	) (map[ids.NodeID]*validators.GetValidatorOutput, map[string]struct{})
 	GatherSignatures(context.Context, ids.ID, []byte)
 	GetVerifyAuth() bool
+	Broadcast(context.Context, ids.ID, uint16, uint16, []byte)
 }

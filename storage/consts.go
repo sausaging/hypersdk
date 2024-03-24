@@ -7,4 +7,5 @@ const (
 	block    = "blockdb"
 	state    = "statedb"
 	metadata = "metadatadb"
+	file     = "filedb"
 )

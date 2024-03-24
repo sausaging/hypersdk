@@ -31,6 +31,7 @@ import (
 	"github.com/ava-labs/hypersdk/chain"
 	"github.com/ava-labs/hypersdk/emap"
 	"github.com/ava-labs/hypersdk/fees"
+	"github.com/ava-labs/hypersdk/filedb"
 	"github.com/ava-labs/hypersdk/gossiper"
 	"github.com/ava-labs/hypersdk/mempool"
 	"github.com/ava-labs/hypersdk/network"
@@ -63,6 +64,7 @@ type VM struct {
 	rawStateDB     database.Database
 	stateDB        merkledb.MerkleDB
 	vmDB           database.Database
+	fileDB         *filedb.FileDB
 	handlers       Handlers
 	actionRegistry chain.ActionRegistry
 	authRegistry   chain.AuthRegistry
@@ -115,8 +117,9 @@ type VM struct {
 	// Warp manager fetches signatures from other validators for a given accepted
 	// txID
 	warpManager *WarpManager
-
-	// Network manager routes p2p messages to pre-registered handlers
+	//@todo broadcast tree vm component
+	broadcastManager *BroadCastManager
+	// Network manager routes p2p messages to pre-registered handlers @todo
 	networkManager *network.Manager
 
 	metrics  *Metrics
@@ -166,16 +169,25 @@ func (vm *VM) Initialize(
 	vm.metrics = metrics
 	vm.proposerMonitor = NewProposerMonitor(vm)
 	vm.networkManager = network.NewManager(vm.snowCtx.Log, vm.snowCtx.NodeID, appSender)
+	// @todo can do changes here for broadcast list
+	// network manager is the key, and it handles the interface for p2p messaging.
+	// register the handler and initiate the handler and set the handler.
+	// implement all the required methods for common.AppSender
 
 	warpHandler, warpSender := vm.networkManager.Register()
 	vm.warpManager = NewWarpManager(vm)
 	vm.networkManager.SetHandler(warpHandler, NewWarpHandler(vm))
 	go vm.warpManager.Run(warpSender)
+	broadcastHandler, broadcastSender := vm.networkManager.Register()
+	vm.broadcastManager = NewBroadCastManager(vm)
+	vm.networkManager.SetHandler(broadcastHandler, NewBroadCastTreeHandler(vm))
+	go vm.broadcastManager.Run(broadcastSender)
+
 	vm.baseDB = baseDB
 
 	// Always initialize implementation first
 	vm.config, vm.genesis, vm.builder, vm.gossiper, vm.vmDB,
-		vm.rawStateDB, vm.handlers, vm.actionRegistry, vm.authRegistry, vm.authEngine, err = vm.c.Initialize(
+		vm.rawStateDB, vm.fileDB, vm.handlers, vm.actionRegistry, vm.authRegistry, vm.authEngine, err = vm.c.Initialize(
 		vm,
 		snowCtx,
 		gatherer,
@@ -565,6 +577,7 @@ func (vm *VM) Shutdown(ctx context.Context) error {
 	vm.builder.Done()
 	vm.gossiper.Done()
 	vm.authVerifiers.Stop()
+	vm.broadcastManager.Done()
 	if vm.profiler != nil {
 		vm.profiler.Shutdown()
 	}
@@ -1025,6 +1038,17 @@ func (vm *VM) GetBlockIDAtHeight(_ context.Context, height uint64) (ids.ID, erro
 	}
 	vm.metrics.blocksHeightsFromDisk.Inc()
 	return vm.GetBlockHeightID(height)
+}
+
+// @todo imageID
+func (vm *VM) Broadcast(
+	ctx context.Context,
+	imageID ids.ID,
+	proofValType uint16,
+	chunkIndex uint16,
+	data []byte,
+) {
+	vm.broadcastManager.Broadcast(ctx, imageID, proofValType, chunkIndex, data)
 }
 
 // backfillSeenTransactions makes a best effort to populate [vm.seen]
