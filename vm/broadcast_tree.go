@@ -19,7 +19,7 @@ import (
 )
 
 const (
-	deployPrefix uint8 = 0xd
+	deployPrefix uint8 = 0x7
 )
 
 type BroadCastManager struct {
@@ -90,9 +90,9 @@ func (b *BroadCastManager) request(
 	requestID := b.requestID
 	b.requestID++
 	b.jobs[requestID] = j
-	initial := consts.Uint16Len*2 + consts.IDLen + len(j.data)
+	initial := consts.Uint64Len*2 + consts.IDLen + len(j.data)
 	//@todo pack the data
-	p := codec.NewWriter(initial, initial)
+	p := codec.NewWriter(initial, initial*2)
 	p.PackID(j.imageID)
 	p.PackUint64(uint64(j.proofValType))
 	p.PackUint64(uint64(j.chunkIndex))
