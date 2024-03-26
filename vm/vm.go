@@ -117,9 +117,9 @@ type VM struct {
 	// Warp manager fetches signatures from other validators for a given accepted
 	// txID
 	warpManager *WarpManager
-	//@todo broadcast tree vm component
+	// broadcast manager
 	broadcastManager *BroadCastManager
-	// Network manager routes p2p messages to pre-registered handlers @todo
+	// Network manager routes p2p messages to pre-registered handlers
 	networkManager *network.Manager
 
 	metrics  *Metrics
@@ -169,10 +169,6 @@ func (vm *VM) Initialize(
 	vm.metrics = metrics
 	vm.proposerMonitor = NewProposerMonitor(vm)
 	vm.networkManager = network.NewManager(vm.snowCtx.Log, vm.snowCtx.NodeID, appSender)
-	// @todo can do changes here for broadcast list
-	// network manager is the key, and it handles the interface for p2p messaging.
-	// register the handler and initiate the handler and set the handler.
-	// implement all the required methods for common.AppSender
 
 	warpHandler, warpSender := vm.networkManager.Register()
 	vm.warpManager = NewWarpManager(vm)
@@ -1040,7 +1036,6 @@ func (vm *VM) GetBlockIDAtHeight(_ context.Context, height uint64) (ids.ID, erro
 	return vm.GetBlockHeightID(height)
 }
 
-// @todo imageID
 func (vm *VM) Broadcast(
 	ctx context.Context,
 	imageID ids.ID,
