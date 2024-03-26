@@ -174,10 +174,6 @@ func (vm *VM) Initialize(
 	vm.warpManager = NewWarpManager(vm)
 	vm.networkManager.SetHandler(warpHandler, NewWarpHandler(vm))
 	go vm.warpManager.Run(warpSender)
-	broadcastHandler, broadcastSender := vm.networkManager.Register()
-	vm.broadcastManager = NewBroadCastManager(vm)
-	vm.networkManager.SetHandler(broadcastHandler, NewBroadCastTreeHandler(vm))
-	go vm.broadcastManager.Run(broadcastSender)
 
 	vm.baseDB = baseDB
 
@@ -194,6 +190,11 @@ func (vm *VM) Initialize(
 	if err != nil {
 		return fmt.Errorf("implementation initialization failed: %w", err)
 	}
+	// Initiate broadcast manager
+	broadcastHandler, broadcastSender := vm.networkManager.Register()
+	vm.broadcastManager = NewBroadCastManager(vm)
+	vm.networkManager.SetHandler(broadcastHandler, NewBroadCastTreeHandler(vm))
+	go vm.broadcastManager.Run(broadcastSender)
 
 	// Setup tracer
 	vm.tracer, err = trace.New(vm.config.GetTraceConfig())
