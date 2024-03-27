@@ -52,7 +52,7 @@ func NewBroadCastManager(vm *VM) *BroadCastManager {
 	}
 }
 
-func (b *BroadCastManager) Run(appSender common.AppSender) { //@todo check the impl for once
+func (b *BroadCastManager) Run(appSender common.AppSender) {
 	b.appSender = appSender
 	b.vm.Logger().Info("starting broadcast manager")
 	defer close(b.done)
@@ -91,7 +91,7 @@ func (b *BroadCastManager) request(
 	b.requestID++
 	b.jobs[requestID] = j
 	initial := consts.Uint64Len*2 + consts.IDLen + len(j.data)
-	//@todo pack the data
+	// pack the data
 	p := codec.NewWriter(initial, initial*2)
 	p.PackID(j.imageID)
 	p.PackUint64(uint64(j.proofValType))
@@ -232,8 +232,12 @@ func (b *BroadCastManager) Broadcast(
 		return
 	}
 
-	//@todo do the same for receiving for every validatorr
 	for nodeID := range validators {
+
+		if nodeID == b.vm.snowCtx.NodeID {
+			// don't send proofs to same node again.
+			continue
+		}
 
 		idb := make([]byte, consts.IDLen+consts.Uint16Len*2+consts.NodeIDLen)
 		copy(idb, imageID[:])
