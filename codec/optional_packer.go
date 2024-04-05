@@ -7,7 +7,7 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/utils/set"
 
-	"github.com/ava-labs/hypersdk/consts"
+	"github.com/sausaging/hypersdk/consts"
 )
 
 // OptionalPacker defines a struct that includes a Packer [ip], a bitset

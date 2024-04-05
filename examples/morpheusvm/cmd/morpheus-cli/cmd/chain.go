@@ -7,10 +7,10 @@ import (
 	"context"
 
 	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/hypersdk/chain"
+	"github.com/sausaging/hypersdk/chain"
 	"github.com/spf13/cobra"
 
-	brpc "github.com/ava-labs/hypersdk/examples/morpheusvm/rpc"
+	brpc "github.com/sausaging/hypersdk/examples/morpheusvm/rpc"
 )
 
 var chainCmd = &cobra.Command{

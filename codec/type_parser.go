@@ -4,7 +4,7 @@
 package codec
 
 import (
-	"github.com/ava-labs/hypersdk/consts"
+	"github.com/sausaging/hypersdk/consts"
 )
 
 type decoder[T any, X any, Y any] struct {

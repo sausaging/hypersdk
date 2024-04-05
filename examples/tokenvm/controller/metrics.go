@@ -6,8 +6,8 @@ package controller
 import (
 	ametrics "github.com/ava-labs/avalanchego/api/metrics"
 	"github.com/ava-labs/avalanchego/utils/wrappers"
-	"github.com/ava-labs/hypersdk/examples/tokenvm/consts"
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/sausaging/hypersdk/examples/tokenvm/consts"
 )
 
 type metrics struct {

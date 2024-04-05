@@ -13,11 +13,11 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/utils/logging"
 
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/state"
-	hutils "github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/state"
+	hutils "github.com/sausaging/hypersdk/utils"
 
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/actions"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/actions"
 )
 
 func newProgramCmd(log logging.Logger, db *state.SimpleMutable) *cobra.Command {

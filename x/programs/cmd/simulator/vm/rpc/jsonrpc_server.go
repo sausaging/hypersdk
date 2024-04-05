@@ -8,9 +8,9 @@ import (
 
 	"github.com/ava-labs/avalanchego/ids"
 
-	"github.com/ava-labs/hypersdk/fees"
+	"github.com/sausaging/hypersdk/fees"
 
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/genesis"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/genesis"
 )
 
 type JSONRPCServer struct {

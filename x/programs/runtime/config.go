@@ -4,8 +4,8 @@
 package runtime
 
 import (
-	"github.com/ava-labs/hypersdk/x/programs/engine"
-	"github.com/ava-labs/hypersdk/x/programs/host"
+	"github.com/sausaging/hypersdk/x/programs/engine"
+	"github.com/sausaging/hypersdk/x/programs/host"
 )
 
 type Config struct {

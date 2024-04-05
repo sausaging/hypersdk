@@ -9,14 +9,14 @@ import (
 
 	"github.com/ava-labs/avalanchego/ids"
 
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/consts"
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/genesis"
-	_ "github.com/ava-labs/hypersdk/examples/morpheusvm/registry" // ensure registry populated
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/storage"
-	"github.com/ava-labs/hypersdk/requester"
-	"github.com/ava-labs/hypersdk/rpc"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/consts"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/genesis"
+	_ "github.com/sausaging/hypersdk/examples/morpheusvm/registry" // ensure registry populated
+	"github.com/sausaging/hypersdk/examples/morpheusvm/storage"
+	"github.com/sausaging/hypersdk/requester"
+	"github.com/sausaging/hypersdk/rpc"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 type JSONRPCClient struct {

@@ -6,8 +6,8 @@ package runtime
 import (
 	"context"
 
-	"github.com/ava-labs/hypersdk/x/programs/engine"
-	"github.com/ava-labs/hypersdk/x/programs/program"
+	"github.com/sausaging/hypersdk/x/programs/engine"
+	"github.com/sausaging/hypersdk/x/programs/program"
 )
 
 type Runtime interface {

@@ -15,12 +15,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/mock/gomock"
 
-	"github.com/ava-labs/hypersdk/cache"
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/config"
-	"github.com/ava-labs/hypersdk/emap"
-	"github.com/ava-labs/hypersdk/mempool"
-	"github.com/ava-labs/hypersdk/trace"
+	"github.com/sausaging/hypersdk/cache"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/config"
+	"github.com/sausaging/hypersdk/emap"
+	"github.com/sausaging/hypersdk/mempool"
+	"github.com/sausaging/hypersdk/trace"
 )
 
 func TestBlockCache(t *testing.T) {

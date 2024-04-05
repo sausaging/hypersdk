@@ -12,8 +12,8 @@ import (
 	"github.com/ava-labs/avalanchego/utils/logging"
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
 
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/fees"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/fees"
 )
 
 type VM interface {

@@ -5,9 +5,9 @@ package genesis
 
 import (
 	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/examples/tokenvm/storage"
-	"github.com/ava-labs/hypersdk/fees"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/examples/tokenvm/storage"
+	"github.com/sausaging/hypersdk/fees"
 )
 
 var _ chain.Rules = (*Rules)(nil)

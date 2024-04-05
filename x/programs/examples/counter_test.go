@@ -13,16 +13,16 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/hypersdk/x/programs/engine"
-	"github.com/ava-labs/hypersdk/x/programs/examples/imports/program"
-	"github.com/ava-labs/hypersdk/x/programs/examples/imports/pstate"
-	"github.com/ava-labs/hypersdk/x/programs/examples/storage"
-	"github.com/ava-labs/hypersdk/x/programs/host"
-	"github.com/ava-labs/hypersdk/x/programs/runtime"
-	"github.com/ava-labs/hypersdk/x/programs/tests"
+	"github.com/sausaging/hypersdk/x/programs/engine"
+	"github.com/sausaging/hypersdk/x/programs/examples/imports/program"
+	"github.com/sausaging/hypersdk/x/programs/examples/imports/pstate"
+	"github.com/sausaging/hypersdk/x/programs/examples/storage"
+	"github.com/sausaging/hypersdk/x/programs/host"
+	"github.com/sausaging/hypersdk/x/programs/runtime"
+	"github.com/sausaging/hypersdk/x/programs/tests"
 )
 
-// go test -v -timeout 30s -run ^TestCounterProgram$ github.com/ava-labs/hypersdk/x/programs/examples
+// go test -v -timeout 30s -run ^TestCounterProgram$ github.com/sausaging/hypersdk/x/programs/examples
 func TestCounterProgram(t *testing.T) {
 	require := require.New(t)
 	db := newTestDB()

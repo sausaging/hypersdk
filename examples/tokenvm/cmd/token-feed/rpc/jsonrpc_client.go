@@ -7,8 +7,8 @@ import (
 	"context"
 	"strings"
 
-	"github.com/ava-labs/hypersdk/examples/tokenvm/cmd/token-feed/manager"
-	"github.com/ava-labs/hypersdk/requester"
+	"github.com/sausaging/hypersdk/examples/tokenvm/cmd/token-feed/manager"
+	"github.com/sausaging/hypersdk/requester"
 )
 
 const (

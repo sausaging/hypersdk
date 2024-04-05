@@ -8,9 +8,9 @@ import (
 	"github.com/ava-labs/avalanchego/cache"
 	"github.com/ava-labs/avalanchego/database"
 	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/lockmap"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/lockmap"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 type FileDB struct {

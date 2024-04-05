@@ -11,8 +11,8 @@ import (
 
 	"github.com/ava-labs/avalanchego/utils/math"
 
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/window"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/window"
 )
 
 const (

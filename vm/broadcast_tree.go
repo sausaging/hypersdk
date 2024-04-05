@@ -10,11 +10,11 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/snow/engine/common"
 	"github.com/ava-labs/avalanchego/utils/set"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/filedb"
-	"github.com/ava-labs/hypersdk/heap"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/filedb"
+	"github.com/sausaging/hypersdk/heap"
+	"github.com/sausaging/hypersdk/utils"
 	"go.uber.org/zap"
 )
 

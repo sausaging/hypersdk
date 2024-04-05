@@ -9,7 +9,7 @@ import (
 
 	"github.com/ava-labs/avalanchego/ids"
 
-	"github.com/ava-labs/hypersdk/requester"
+	"github.com/sausaging/hypersdk/requester"
 )
 
 const (

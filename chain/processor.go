@@ -12,11 +12,11 @@ import (
 	"github.com/ava-labs/avalanchego/database"
 	"github.com/ava-labs/avalanchego/trace"
 
-	"github.com/ava-labs/hypersdk/executor"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/keys"
-	"github.com/ava-labs/hypersdk/state"
-	"github.com/ava-labs/hypersdk/tstate"
+	"github.com/sausaging/hypersdk/executor"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/keys"
+	"github.com/sausaging/hypersdk/state"
+	"github.com/sausaging/hypersdk/tstate"
 )
 
 type fetchData struct {

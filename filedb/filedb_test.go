@@ -11,7 +11,7 @@ import (
 
 	"github.com/ava-labs/avalanchego/database"
 	"github.com/ava-labs/avalanchego/utils/units"
-	"github.com/ava-labs/hypersdk/pebble"
+	"github.com/sausaging/hypersdk/pebble"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sync/errgroup"
 )

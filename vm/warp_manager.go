@@ -16,11 +16,11 @@ import (
 	"github.com/ava-labs/avalanchego/utils/set"
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/heap"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/heap"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 const (

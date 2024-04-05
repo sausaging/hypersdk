@@ -7,8 +7,8 @@ package main
 import (
 	"os"
 
-	"github.com/ava-labs/hypersdk/examples/tokenvm/cmd/token-cli/cmd"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/examples/tokenvm/cmd/token-cli/cmd"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 func main() {

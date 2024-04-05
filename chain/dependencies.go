@@ -16,11 +16,11 @@ import (
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
 	"github.com/ava-labs/avalanchego/x/merkledb"
 
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/executor"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/state"
-	"github.com/ava-labs/hypersdk/workers"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/executor"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/state"
+	"github.com/sausaging/hypersdk/workers"
 )
 
 type (

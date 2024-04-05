@@ -19,11 +19,11 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/hypersdk/executor"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/keys"
-	"github.com/ava-labs/hypersdk/state"
-	"github.com/ava-labs/hypersdk/tstate"
+	"github.com/sausaging/hypersdk/executor"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/keys"
+	"github.com/sausaging/hypersdk/state"
+	"github.com/sausaging/hypersdk/tstate"
 )
 
 const (

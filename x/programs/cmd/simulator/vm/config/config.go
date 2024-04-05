@@ -12,13 +12,13 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/utils/logging"
 	"github.com/ava-labs/avalanchego/utils/profiler"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/config"
-	"github.com/ava-labs/hypersdk/trace"
-	"github.com/ava-labs/hypersdk/vm"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/config"
+	"github.com/sausaging/hypersdk/trace"
+	"github.com/sausaging/hypersdk/vm"
 
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/consts"
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/version"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/consts"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/version"
 )
 
 var _ vm.Config = (*Config)(nil)

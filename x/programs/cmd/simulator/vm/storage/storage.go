@@ -11,10 +11,10 @@ import (
 	"github.com/ava-labs/avalanchego/database"
 	"github.com/ava-labs/avalanchego/ids"
 
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/crypto/ed25519"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/state"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/crypto/ed25519"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/state"
 )
 
 const (

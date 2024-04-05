@@ -8,18 +8,18 @@ import (
 	"time"
 
 	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/hypersdk/cli"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/crypto/ed25519"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/cli"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/crypto/ed25519"
+	"github.com/sausaging/hypersdk/utils"
 	"github.com/spf13/cobra"
 
-	"github.com/ava-labs/hypersdk/examples/tokenvm/auth"
-	"github.com/ava-labs/hypersdk/examples/tokenvm/challenge"
-	frpc "github.com/ava-labs/hypersdk/examples/tokenvm/cmd/token-faucet/rpc"
-	tconsts "github.com/ava-labs/hypersdk/examples/tokenvm/consts"
-	trpc "github.com/ava-labs/hypersdk/examples/tokenvm/rpc"
+	"github.com/sausaging/hypersdk/examples/tokenvm/auth"
+	"github.com/sausaging/hypersdk/examples/tokenvm/challenge"
+	frpc "github.com/sausaging/hypersdk/examples/tokenvm/cmd/token-faucet/rpc"
+	tconsts "github.com/sausaging/hypersdk/examples/tokenvm/consts"
+	trpc "github.com/sausaging/hypersdk/examples/tokenvm/rpc"
 )
 
 var keyCmd = &cobra.Command{

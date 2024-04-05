@@ -13,11 +13,11 @@ import (
 	"github.com/ava-labs/avalanchego/database"
 	"github.com/ava-labs/avalanchego/ids"
 	smath "github.com/ava-labs/avalanchego/utils/math"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/consts"
-	tconsts "github.com/ava-labs/hypersdk/examples/tokenvm/consts"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/state"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/consts"
+	tconsts "github.com/sausaging/hypersdk/examples/tokenvm/consts"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/state"
 )
 
 type ReadState func(context.Context, [][]byte) ([][]byte, []error)

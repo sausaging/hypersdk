@@ -9,14 +9,14 @@ import (
 
 	"github.com/ava-labs/avalanchego/ids"
 
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/requester"
-	"github.com/ava-labs/hypersdk/rpc"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/requester"
+	"github.com/sausaging/hypersdk/rpc"
 
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/consts"
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/genesis"
-	_ "github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/registry" // ensure registry populated
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/storage"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/consts"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/genesis"
+	_ "github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/registry" // ensure registry populated
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/storage"
 )
 
 type JSONRPCClient struct {

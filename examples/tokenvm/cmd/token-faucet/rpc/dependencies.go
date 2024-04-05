@@ -7,7 +7,7 @@ import (
 	"context"
 
 	"github.com/ava-labs/avalanchego/ids"
-	"github.com/ava-labs/hypersdk/codec"
+	"github.com/sausaging/hypersdk/codec"
 )
 
 type Manager interface {

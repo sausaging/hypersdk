@@ -17,10 +17,10 @@ import (
 	"github.com/ava-labs/avalanchego/vms/proposervm/proposer"
 	"go.uber.org/zap"
 
-	"github.com/ava-labs/hypersdk/cache"
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/workers"
+	"github.com/sausaging/hypersdk/cache"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/workers"
 )
 
 var _ Gossiper = (*Proposer)(nil)

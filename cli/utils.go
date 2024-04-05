@@ -7,9 +7,9 @@ import (
 	"context"
 	"time"
 
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/rpc"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/rpc"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 const (

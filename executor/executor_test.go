@@ -12,7 +12,7 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/hypersdk/state"
+	"github.com/sausaging/hypersdk/state"
 )
 
 func TestExecutorNoConflicts(t *testing.T) {

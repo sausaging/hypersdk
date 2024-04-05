@@ -19,13 +19,13 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/pubsub"
-	"github.com/ava-labs/hypersdk/rpc"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/pubsub"
+	"github.com/sausaging/hypersdk/rpc"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 const (

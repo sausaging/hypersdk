@@ -17,10 +17,10 @@ import (
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
 	"golang.org/x/exp/maps"
 
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/requester"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/requester"
+	"github.com/sausaging/hypersdk/utils"
 
 	avautils "github.com/ava-labs/avalanchego/utils"
 )

@@ -10,14 +10,14 @@ import (
 
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/cli"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/examples/tokenvm/actions"
-	tconsts "github.com/ava-labs/hypersdk/examples/tokenvm/consts"
-	trpc "github.com/ava-labs/hypersdk/examples/tokenvm/rpc"
-	"github.com/ava-labs/hypersdk/rpc"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/cli"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/examples/tokenvm/actions"
+	tconsts "github.com/sausaging/hypersdk/examples/tokenvm/consts"
+	trpc "github.com/sausaging/hypersdk/examples/tokenvm/rpc"
+	"github.com/sausaging/hypersdk/rpc"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 // sendAndWait may not be used concurrently

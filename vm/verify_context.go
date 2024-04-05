@@ -10,8 +10,8 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/utils/set"
 
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/state"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/state"
 )
 
 var (

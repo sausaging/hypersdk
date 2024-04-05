@@ -6,7 +6,7 @@ package keys
 import (
 	"encoding/binary"
 
-	"github.com/ava-labs/hypersdk/consts"
+	"github.com/sausaging/hypersdk/consts"
 )
 
 const chunkSize = 64 // bytes

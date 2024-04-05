@@ -12,9 +12,9 @@ import (
 	"github.com/bytecodealliance/wasmtime-go/v14"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ava-labs/hypersdk/x/programs/engine"
-	"github.com/ava-labs/hypersdk/x/programs/host"
-	"github.com/ava-labs/hypersdk/x/programs/program"
+	"github.com/sausaging/hypersdk/x/programs/engine"
+	"github.com/sausaging/hypersdk/x/programs/host"
+	"github.com/sausaging/hypersdk/x/programs/program"
 )
 
 func TestStop(t *testing.T) {

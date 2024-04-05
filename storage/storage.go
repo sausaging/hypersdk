@@ -9,9 +9,9 @@ import (
 	"github.com/ava-labs/avalanchego/database/corruptabledb"
 	"github.com/ava-labs/avalanchego/utils/units"
 
-	"github.com/ava-labs/hypersdk/filedb"
-	"github.com/ava-labs/hypersdk/pebble"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/filedb"
+	"github.com/sausaging/hypersdk/pebble"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 // TODO: add option to use a single DB with prefixes to allow for atomic writes

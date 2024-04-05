@@ -11,8 +11,8 @@ import (
 	"github.com/ava-labs/avalanchego/utils/logging"
 	"github.com/ava-labs/avalanchego/utils/ulimit"
 	"github.com/ava-labs/avalanchego/vms/rpcchainvm"
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/cmd/morpheusvm/version"
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/controller"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/cmd/morpheusvm/version"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/controller"
 	"github.com/spf13/cobra"
 )
 

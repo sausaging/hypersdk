@@ -6,11 +6,11 @@ package registry
 import (
 	"github.com/ava-labs/avalanchego/utils/wrappers"
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/codec"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/codec"
 
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/actions"
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/consts"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/actions"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/consts"
 )
 
 // Setup types

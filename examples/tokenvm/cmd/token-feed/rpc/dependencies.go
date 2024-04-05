@@ -6,8 +6,8 @@ package rpc
 import (
 	"context"
 
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/examples/tokenvm/cmd/token-feed/manager"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/examples/tokenvm/cmd/token-feed/manager"
 )
 
 type Manager interface {

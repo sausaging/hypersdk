@@ -5,11 +5,11 @@ package utils
 
 import (
 	"github.com/ava-labs/avalanchego/utils/formatting/address"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/crypto"
-	"github.com/ava-labs/hypersdk/crypto/ed25519"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/crypto"
+	"github.com/sausaging/hypersdk/crypto/ed25519"
 
-	"github.com/ava-labs/hypersdk/x/programs/cmd/simulator/vm/consts"
+	"github.com/sausaging/hypersdk/x/programs/cmd/simulator/vm/consts"
 )
 
 func Address(pk ed25519.PublicKey) string {

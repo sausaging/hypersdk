@@ -10,8 +10,8 @@ import (
 	"github.com/ava-labs/avalanchego/database"
 	"github.com/ava-labs/avalanchego/ids"
 
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/state"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/state"
 )
 
 const (

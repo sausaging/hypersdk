@@ -10,9 +10,9 @@ import (
 	"github.com/ava-labs/avalanchego/database/memdb"
 	"github.com/near/borsh-go"
 
-	"github.com/ava-labs/hypersdk/crypto/ed25519"
-	"github.com/ava-labs/hypersdk/state"
-	"github.com/ava-labs/hypersdk/x/programs/program"
+	"github.com/sausaging/hypersdk/crypto/ed25519"
+	"github.com/sausaging/hypersdk/state"
+	"github.com/sausaging/hypersdk/x/programs/program"
 )
 
 func newKey() (ed25519.PublicKey, error) {

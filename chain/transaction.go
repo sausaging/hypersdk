@@ -12,16 +12,16 @@ import (
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
 
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/consts"
-	"github.com/ava-labs/hypersdk/emap"
-	"github.com/ava-labs/hypersdk/fees"
-	"github.com/ava-labs/hypersdk/keys"
-	"github.com/ava-labs/hypersdk/math"
-	"github.com/ava-labs/hypersdk/mempool"
-	"github.com/ava-labs/hypersdk/state"
-	"github.com/ava-labs/hypersdk/tstate"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/consts"
+	"github.com/sausaging/hypersdk/emap"
+	"github.com/sausaging/hypersdk/fees"
+	"github.com/sausaging/hypersdk/keys"
+	"github.com/sausaging/hypersdk/math"
+	"github.com/sausaging/hypersdk/mempool"
+	"github.com/sausaging/hypersdk/state"
+	"github.com/sausaging/hypersdk/tstate"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 var (

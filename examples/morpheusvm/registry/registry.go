@@ -6,12 +6,12 @@ package registry
 import (
 	"github.com/ava-labs/avalanchego/utils/wrappers"
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/codec"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/codec"
 
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/actions"
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/auth"
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/consts"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/actions"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/auth"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/consts"
 )
 
 // Setup types

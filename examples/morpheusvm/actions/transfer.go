@@ -8,13 +8,13 @@ import (
 
 	"github.com/ava-labs/avalanchego/ids"
 	"github.com/ava-labs/avalanchego/vms/platformvm/warp"
-	"github.com/ava-labs/hypersdk/chain"
-	"github.com/ava-labs/hypersdk/codec"
-	"github.com/ava-labs/hypersdk/consts"
-	mconsts "github.com/ava-labs/hypersdk/examples/morpheusvm/consts"
-	"github.com/ava-labs/hypersdk/examples/morpheusvm/storage"
-	"github.com/ava-labs/hypersdk/state"
-	"github.com/ava-labs/hypersdk/utils"
+	"github.com/sausaging/hypersdk/chain"
+	"github.com/sausaging/hypersdk/codec"
+	"github.com/sausaging/hypersdk/consts"
+	mconsts "github.com/sausaging/hypersdk/examples/morpheusvm/consts"
+	"github.com/sausaging/hypersdk/examples/morpheusvm/storage"
+	"github.com/sausaging/hypersdk/state"
+	"github.com/sausaging/hypersdk/utils"
 )
 
 var _ chain.Action = (*Transfer)(nil)
